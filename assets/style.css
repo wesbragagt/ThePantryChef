@@ -1,0 +1,7 @@
+#logo-holder {
+    background-image: url("images/placeholder.png");
+    background-size: contain;
+    width: 100%;
+    min-height: 300px;
+}
+
