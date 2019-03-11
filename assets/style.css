@@ -5,3 +5,14 @@
     min-height: 300px;
 }
 
+.recipe-holder {
+    max-width: 300px;
+}
+
+.recipe-thumbnail {
+    max-width: 300px;
+}
+
+.btn-centering {
+    margin: 0 auto;
+}
