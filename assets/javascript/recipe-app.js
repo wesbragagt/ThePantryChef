@@ -32,17 +32,42 @@ $("#submit-btn").on("click",   function(event) {
         console.log(response);
         recipeObject = response.hits;
         for (var i = 0; i < recipeObject.length; i++) {
+
             var newAnchor = $("<a>");
             newAnchor.addClass("recipe-link");
             newAnchor.attr("id", "recipe-num-" + i);
-            newAnchor.attr("href", "#recipe-popup");
-            newAnchor.on("click", function() {
-                var newDiv = $("<div>");
-                newDiv.attr("id", "recipe-popup");
-                newDiv.addClass("white-popup mfp-hide");
-                newDiv.html("<p> BEHOLD MY POWER! </p>");
-                $("body").append(newDiv);
-            })
+            newAnchor.attr("href", "#recipe-popup-" + i);
+
+            var newDiv = $("<div>");
+            newDiv.attr("id", "recipe-popup-" + i);
+            newDiv.addClass("recipe-popup mfp-hide d-flex flex-row");
+            newDiv.html();
+
+            var leftDiv = $("<div>");
+            var rightDiv = $("<div>");
+
+            var newImg = $("<img>");
+            newImg.attr("src", recipeObject[i].recipe.image.toString() );
+            newImg.addClass("popup-image");
+            leftDiv.append(newImg);
+
+            var nameLine = "<p>Recipe: " + recipeObject[i].recipe.label + "</p>";
+            var lineBreak = "<br>"
+            var servingsLine = "<p>Serves: " + recipeObject[i].recipe.yield + "</p>";
+            var caloriesLine = "<p>Calories: " + Math.floor(recipeObject[i].recipe.calories) + "</p>";
+            var recipeLinkLine = "<a href='" + recipeObject[i].recipe.shareAs + "'>Click Here for Full Recipe</a>";
+            var sourceLine = "<p>Source: " + recipeObject[i].recipe.source + "</p>";
+
+            rightDiv.append(nameLine + lineBreak + servingsLine + lineBreak + caloriesLine + lineBreak + recipeLinkLine + lineBreak + sourceLine);
+            rightDiv.addClass("pr-1 popup-rightside");
+
+            leftDiv.addClass("popup-leftside");
+
+            newDiv.append(leftDiv)
+                .append(rightDiv);
+
+            $("body").append(newDiv);
+        
 
             var newDiv0 = $("<div>");
             newDiv0.addClass("container-fluid recipe-holder");
