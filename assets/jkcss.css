@@ -5,3 +5,7 @@
 .recipe-thumbnail {
     max-width: 300px;
 }
+
+.fixed-top {
+    position: fixed;
+}
