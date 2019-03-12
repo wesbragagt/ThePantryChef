@@ -64,6 +64,15 @@ $("#submit-btn").on("click",   function(event) {
                 .append(row2);
 
             $("#recipe-container").append(newDiv1);
+            
+            searchString = "";
+            
+            setTimeout(function() {
+                for (var i = 1; i < 4; i++) {
+                    $("#ingredient-input-" + i).val("");
+                }
+            }, 100);
+            
         };
     });
 });
