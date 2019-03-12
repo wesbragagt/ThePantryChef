@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 #logo-holder {
     background-image: url("images/placeholder.png");
     background-size: contain;
@@ -15,4 +19,19 @@
 
 .btn-centering {
     margin: 0 auto;
+}
+
+/* Classes for image aesthetics */
+
+.recipe-holder {
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px #ccc;   
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 10px; 
+}
+
+.recipe-thumbnail {
+    border-radius: 10px;
 }
