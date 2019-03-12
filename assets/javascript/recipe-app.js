@@ -53,7 +53,7 @@ $("#submit-btn").on("click",   function(event) {
             column2.html("<p>" + recipeObject[i].recipe.label + "</p>");
 
             var column3 = $("<div>");
-            column3.addClass("col-4");
+            column3.addClass("col-4 recipe-bottom-right");
             column3.html("<p>Time: " + recipeObject[i].recipe.totalTime + " Min.</p>" );
 
             var newThumb = $("<img>");
