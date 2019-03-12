@@ -16,7 +16,7 @@ $("#submit-btn").on("click",   function(event) {
         searchString += ", " + $("#ingredient-input-2").val().trim();
     }
     if ($("#ingredient-input-3").val().trim() != "") {
-        seachString += ", " + $("#ingredient-input-3").val().trim();
+        searchString += ", " + $("#ingredient-input-3").val().trim();
     }
 
     queryURL = baseURL + "app_id=" + appId + "&app_key=" + apiKey + "&q=" + searchString;
