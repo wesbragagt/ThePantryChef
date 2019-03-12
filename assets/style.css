@@ -51,6 +51,7 @@ body {
 /* Classes for image aesthetics */
 
 .recipe-holder {
+  background: #ffffff;
   -moz-box-shadow: 0 0 20px #ccc;
   -webkit-box-shadow: 0 0 20px #ccc;
   box-shadow: 0 0 20px #ccc;
@@ -110,6 +111,17 @@ a:hover {
   position: fixed;
   top: 0;
   right: 0;
-  left: 92% !important;
+  left: 91.5% !important;
   z-index: 1030;
+}
+
+/* phone screens media query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 65.5% !important;
+    z-index: 1030;
+  }
 }
