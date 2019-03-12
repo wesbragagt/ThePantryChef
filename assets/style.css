@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
 
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
+  /* This is a cool linear gradient http://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
   background: #ffc578; /* Old browsers */
   background: -moz-radial-gradient(
     center,
@@ -90,4 +90,26 @@ a {
 a:hover {
   text-decoration: none;
   color: #e78000;
+}
+
+/* utility classes */
+.custom-margin-top {
+  margin-top: 6em !important;
+}
+
+.custom-text-green {
+  color: #30aac0;
+}
+
+.custom-text-orange {
+  color: #e78000;
+}
+
+/* logo up top */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 92% !important;
+  z-index: 1030;
 }
