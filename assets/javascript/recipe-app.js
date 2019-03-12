@@ -34,8 +34,10 @@ $("#submit-btn").on("click",   function(event) {
             newAnchor.attr("href", recipeObject[i].recipe.shareAs);
             newAnchor.attr("target", "_blank");
 
+            var newDiv0 = $("<div>");
+            newDiv0.addClass("container-fluid recipe-holder");
+
             var newDiv1 = $("<div>");
-            newDiv1.addClass("container-fluid recipe-holder");
 
             var row1 = $("<div>");
             row1.addClass("row");
@@ -70,8 +72,9 @@ $("#submit-btn").on("click",   function(event) {
                 .append(row2);
 
             newAnchor.append(newDiv1)
+            newDiv0.append(newAnchor);
 
-            $("#recipe-container").append(newAnchor);
+            $("#recipe-container").append(newDiv0);
             
             searchString = "";
             
