@@ -33,5 +33,18 @@ body {
 }
 
 .recipe-thumbnail {
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* .recipe-bottom-right {
+    
+} */
+
+a {
+    text-decoration: none;
+    color: #30AAC0;
+} a:hover {
+    text-decoration: none;
+    color: #E78000;
 }
