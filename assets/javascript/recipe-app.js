@@ -4,6 +4,10 @@ var queryURL;
 var baseURL = "https://api.edamam.com/search?";
 var recipeObject;
 
+//Initializing magnific handlers
+
+
+
 //Do not change these two vars
 var appId = "c485664d";
 var apiKey = "2a2ce1b2b1251ecd04f880325d65269f";
@@ -31,8 +35,14 @@ $("#submit-btn").on("click",   function(event) {
             var newAnchor = $("<a>");
             newAnchor.addClass("recipe-link");
             newAnchor.attr("id", "recipe-num-" + i);
-            newAnchor.attr("href", recipeObject[i].recipe.shareAs);
-            newAnchor.attr("target", "_blank");
+            newAnchor.attr("href", "#recipe-popup");
+            newAnchor.on("click", function() {
+                var newDiv = $("<div>");
+                newDiv.attr("id", "recipe-popup");
+                newDiv.addClass("white-popup mfp-hide");
+                newDiv.html("<p> BEHOLD MY POWER! </p>");
+                $("body").append(newDiv);
+            })
 
             var newDiv0 = $("<div>");
             newDiv0.addClass("container-fluid recipe-holder");
@@ -75,6 +85,13 @@ $("#submit-btn").on("click",   function(event) {
             newDiv0.append(newAnchor);
 
             $("#recipe-container").append(newDiv0);
+            setTimeout(function() {
+                $('.recipe-link').magnificPopup({
+                    type:'inline',
+                    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+                });
+
+            }, 100);
             
             searchString = "";
             
@@ -89,4 +106,3 @@ $("#submit-btn").on("click",   function(event) {
 });
 
 var recipeContainer = $("#recipe-container");
-
