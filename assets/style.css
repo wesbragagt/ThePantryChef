@@ -86,6 +86,11 @@ body {
   background-color: #30aac0;
   opacity: 0.75;
   color: #fff;
+  display: flex;
+  flex-flow: row;
+  max-width: 960px;
+  margin: auto;
+  align-content: center;
 }
 
 .popup-image {
@@ -149,5 +154,13 @@ a:hover {
     right: 0;
     left: 65.5% !important;
     z-index: 1030;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recipe-popup {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
   }
 }

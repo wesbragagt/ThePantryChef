@@ -65,6 +65,7 @@ $("#submit-btn").on("click", function(event) {
     console.log(response);
     recipeObject = response.hits;
     for (var i = 0; i < recipeObject.length; i++) {
+      //Data creating the popups for each recipe
       var newAnchor = $("<a>");
       newAnchor.addClass("recipe-link");
       newAnchor.attr("id", "recipe-num-" + i);
@@ -72,7 +73,7 @@ $("#submit-btn").on("click", function(event) {
 
       var newDiv = $("<div>");
       newDiv.attr("id", "recipe-popup-" + i);
-      newDiv.addClass("recipe-popup mfp-hide d-flex flex-row");
+      newDiv.addClass("recipe-popup mfp-hide");
       newDiv.html();
 
       var leftDiv = $("<div>");
@@ -91,7 +92,7 @@ $("#submit-btn").on("click", function(event) {
       var recipeLinkLine =
         "<a href='" +
         recipeObject[i].recipe.shareAs +
-        "'>Click Here for Full Recipe</a>";
+        "' target='_blank'>Click Here for Full Recipe</a>";
       var sourceLine = "<p>Source: " + recipeObject[i].recipe.source + "</p>";
 
       rightDiv.append(
@@ -105,14 +106,16 @@ $("#submit-btn").on("click", function(event) {
           lineBreak +
           sourceLine
       );
-      rightDiv.addClass("pr-1 popup-rightside");
+      rightDiv.addClass("pl-2 popup-rightside");
 
       leftDiv.addClass("popup-leftside");
 
       newDiv.append(leftDiv).append(rightDiv);
+      //end of popup creation
+      //puts popup window in page, hidden
+      $("#recipe-container").append(newDiv);
 
-      $("body").append(newDiv);
-
+      //Start of adding each recipe to the page
       var newDiv0 = $("<div>");
       newDiv0.addClass("container-fluid recipe-holder w3-animate-opacity"); //added smooth animation to recipe loading
 
@@ -134,7 +137,7 @@ $("#submit-btn").on("click", function(event) {
       var column3 = $("<div>");
       column3.addClass("col-4 recipe-bottom-right");
       column3.html(
-        "<p>Time: " + recipeObject[i].recipe.totalTime + " Min.</p>"
+        "<p>Cal.: " + Math.floor(recipeObject[i].recipe.calories) + "</p>"
       );
 
       var newThumb = $("<img>");
