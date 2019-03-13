@@ -121,7 +121,7 @@ a:hover {
 
 /* loading icon */
 .loader {
-  animation: spin 2s linear infinite;
+  animation: spin 1.3s linear infinite;
 }
 
 @keyframes spin {

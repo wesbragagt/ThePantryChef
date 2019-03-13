@@ -13,12 +13,21 @@ var apiKey = "2a2ce1b2b1251ecd04f880325d65269f";
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
- 
-  //   Loading icon when search button is pressed, animate
+  // clear previews results
+  $("#recipe-container").empty();
+
+  //   Loading: spin icon when search button is pressed, animate
   $(".fa-utensils").addClass("loader");
   setTimeout(function() {
     $(".fa-utensils").removeClass("loader");
-  }, 2000);
+    // scroll to this part of the page
+    $("html, body").animate(
+      {
+        scrollTop: $("#scrollTo").offset().top
+      },
+      5
+    );
+  }, 1300);
 
   var searchString = $("#ingredient-input-1")
     .val()
@@ -105,7 +114,7 @@ $("#submit-btn").on("click", function(event) {
       $("body").append(newDiv);
 
       var newDiv0 = $("<div>");
-      newDiv0.addClass("container-fluid recipe-holder");
+      newDiv0.addClass("container-fluid recipe-holder w3-animate-opacity"); //added smooth animation to recipe loading
 
       var newDiv1 = $("<div>");
 
