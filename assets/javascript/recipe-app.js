@@ -13,10 +13,6 @@ var apiKey = "2a2ce1b2b1251ecd04f880325d65269f";
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
-  
-
-  var n = $(document).height();
-  $("html, body").animate({ scrollTop: n }, 50);
 
   var searchString = $("#ingredient-input-1")
     .val()
