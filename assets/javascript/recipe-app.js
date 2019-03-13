@@ -13,8 +13,8 @@ var apiKey = "2a2ce1b2b1251ecd04f880325d65269f";
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
- 
-  //   Loading icon when search button is pressed, animate
+
+  //   Loading: spin icon when search button is pressed, animate
   $(".fa-utensils").addClass("loader");
   setTimeout(function() {
     $(".fa-utensils").removeClass("loader");
@@ -105,7 +105,7 @@ $("#submit-btn").on("click", function(event) {
       $("body").append(newDiv);
 
       var newDiv0 = $("<div>");
-      newDiv0.addClass("container-fluid recipe-holder");
+      newDiv0.addClass("container-fluid recipe-holder w3-animate-opacity");
 
       var newDiv1 = $("<div>");
 
