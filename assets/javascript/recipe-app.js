@@ -13,15 +13,12 @@ var apiKey = "2a2ce1b2b1251ecd04f880325d65269f";
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
-
+ 
   //   Loading icon when search button is pressed, animate
   $(".fa-utensils").addClass("loader");
   setTimeout(function() {
     $(".fa-utensils").removeClass("loader");
   }, 2000);
-
-  var n = $(document).height();
-  $("html, body").animate({ scrollTop: n }, 50);
 
   var searchString = $("#ingredient-input-1")
     .val()
