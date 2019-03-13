@@ -55,6 +55,7 @@ body {
 
 .recipe-holder {
   background: #ffffff;
+  color: #30aac0;
   -moz-box-shadow: 0 0 20px #ccc;
   -webkit-box-shadow: 0 0 20px #ccc;
   box-shadow: 0 0 20px #ccc;
