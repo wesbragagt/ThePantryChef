@@ -127,6 +127,20 @@ a:hover {
   z-index: 1030;
 }
 
+/* loading icon */
+.loader {
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* phone screens media query */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .fixed-top {
