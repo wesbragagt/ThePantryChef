@@ -13,7 +13,7 @@ var apiKey = "2a2ce1b2b1251ecd04f880325d65269f";
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
-  scrollWin();
+  
 
   var n = $(document).height();
   $("html, body").animate({ scrollTop: n }, 50);
@@ -162,6 +162,4 @@ $("#submit-btn").on("click", function(event) {
 
 var recipeContainer = $("#recipe-container");
 
-function scrollWin() {
-  window.scrollTo(0, -25);
-}
+
