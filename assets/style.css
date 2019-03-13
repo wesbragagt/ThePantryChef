@@ -49,16 +49,24 @@ body {
 
 #submit-btn {
   background-color: #30aac0;
+} 
+
+.grow { 
+  transition: all .2s ease-in-out; 
+} .grow:hover { 
+  transform: scale(1.1); 
+  -moz-box-shadow: 0 0 20px #444;
+  -webkit-box-shadow: 0 0 20px #444;
+  box-shadow: 0 0 20px #444;
 }
 
 /* Classes for image aesthetics */
 
 .recipe-holder {
   background: #ffffff;
-  color: #30aac0;
-  -moz-box-shadow: 0 0 20px #ccc;
-  -webkit-box-shadow: 0 0 20px #ccc;
-  box-shadow: 0 0 20px #ccc;
+  -moz-box-shadow: 0 0 20px #444;
+  -webkit-box-shadow: 0 0 20px #444;
+  box-shadow: 0 0 20px #444;
   padding: 0;
   margin-bottom: 10px;
   border-radius: 10px;

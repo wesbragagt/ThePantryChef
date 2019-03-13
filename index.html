@@ -28,7 +28,7 @@
         <div class="container d-flex flex-column align-items-center custom-margin-top">
             
             <h1 class="display-4 text-dark">Pantry Chef</h1>
-            <p class="lead  text-dark">Your personal guide to cooking tasty recipes with minimal effort</p>
+            <p class="lead  text-dark">Find new recipes based on the ingredients you want</p>
             
           </div>
           
@@ -40,6 +40,7 @@
             <div
               class="form-group col-sm-12 col-md-4 offset-md-4 col-lg-4 offset-lg-4"
             >
+            <label for="ingredient-input-1" class="d-none">ingredient 1</label>
               <input
                 type="text"
                 class="form-control"
@@ -51,6 +52,7 @@
             <div
               class="form-group col-sm-12 col-md-4 offset-md-4 col-lg-4 offset-lg-4"
             >
+            <label for="ingredient-input-2" class="d-none">ingredient 2</label>
               <input
                 type="text"
                 class="form-control"
@@ -62,6 +64,7 @@
             <div
               class="form-group col-sm-12 col-md-4 offset-md-4 col-lg-4 offset-lg-4"
             >
+            <label for="ingredient-input-3" class="d-none">ingredient 3</label>
               <input
                 type="text"
                 class="form-control"
@@ -70,8 +73,8 @@
               />
             </div>
             <div class="form-group m-auto">
-              
-                  <button type="submit" class="btn text-light" id="submit-btn">
+              <label for="submit-btn" class="d-none">Search</label>
+                  <button type="submit" class="btn text-light grow" id="submit-btn">
                     Search
                     <i class="ml-1 fas fa-utensils"></i>  
                   </button>
