@@ -26,6 +26,11 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.montez-font {
+  font-family: 'Montez', cursive;
+  font-size: 5em;
+}
+
 #logo-holder {
   background-image: url("../assets/images/pantry-hero-img-1280x300.jpeg");
   background-size: cover;
