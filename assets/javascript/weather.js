@@ -13,10 +13,24 @@ $.ajax({
     // Get current temperature
     var temperature = response.main.temp;
     temperature = Math.floor(temperature);
-    console.log(temperature);
 
+    var weatherType = response.weather[0].main;
 
+    var weatherIcon = response.weather[0].icon;
+    console.log(weatherIcon);
+
+    // Attempted to add the weather icon (inline) to the existing message. Will require more changes than probably desired
+    // var weatherIconURL = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+
+    // var weatherIconDisplay = $("<img>").attr("src", weatherIconURL);
+
+    // var newSpan = $("<span>");
+    // newSpan = $(newSpan).append(weatherIconDisplay);
+    // console.log(newSpan);
+
+    var weatherMessage = "It's currently " + temperature + "&#8457;" + " outside. Weather condition: " + weatherType;
     
+    $(".weather-message").html(weatherMessage);
 })
 
 
