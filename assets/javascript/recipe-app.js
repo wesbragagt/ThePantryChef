@@ -150,8 +150,11 @@ $("#submit-btn").on("click", function(event) {
           "<p>Serves: " + recipeObject[i].recipe.yield + "</p>";
         var caloriesLine =
           "<p>Calories: " +
-          Math.floor(recipeObject[i].recipe.calories) +
+          Math.floor(
+            recipeObject[i].recipe.calories / recipeObject[i].recipe.yield
+          ) +
           "</p>";
+
         var recipeLinkLine =
           "<a href='" +
           recipeObject[i].recipe.shareAs +
@@ -200,7 +203,11 @@ $("#submit-btn").on("click", function(event) {
         var column3 = $("<div>");
         column3.addClass("col-4 recipe-bottom-right");
         column3.html(
-          "<p>Cal.: " + Math.floor(recipeObject[i].recipe.calories) + "</p>"
+          "<p>Cal.: " +
+            Math.floor(
+              recipeObject[i].recipe.calories / recipeObject[i].recipe.yield
+            ) +
+            "</p>"
         );
 
         var newThumb = $("<img>");
