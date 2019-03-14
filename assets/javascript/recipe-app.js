@@ -1,3 +1,29 @@
+var recentSearch = JSON.parse(localStorage.getItem("searches"));
+
+$(document).ready(function() {
+  if (recentSearch == null) {
+    recentSearch = [];
+  }
+
+  // submit button storage
+  $("#submit-btn").on("click", function() {
+    var newSearch = {
+      ing1: $("#ingredient-input-1")
+        .val()
+        .trim(),
+      ing2: $("#ingredient-input-2")
+        .val()
+        .trim(),
+      ing3: $("#ingredient-input-3")
+        .val()
+        .trim()
+    };
+
+    recentSearch.push(newSearch);
+    localStorage.setItem("searches", JSON.stringify(recentSearch));
+  });
+});
+
 //Initializing variables
 var queryURL;
 
@@ -15,6 +41,7 @@ var regExNotLetters = /[^a-z\s]/i;
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
+
   // clear previews results
   $("#recipe-container").empty();
   $("#input-error-box").html("");
