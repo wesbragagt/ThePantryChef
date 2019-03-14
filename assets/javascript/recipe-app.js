@@ -22,6 +22,24 @@ $(document).ready(function() {
     recentSearch.push(newSearch);
     localStorage.setItem("searches", JSON.stringify(recentSearch));
   });
+
+  // TIME DISPLAY change paragraph with friendly good morning, good afternoon and good evening.
+
+  var now = moment().format("HH:mm");
+  console.log(now);
+
+  if (parseInt(now) < 12 && parseInt(now) > 5) {
+    $(".chef-message").text("Good morning");
+  }
+
+  if (parseInt(now) >= 12 && parseInt(now) < 18) {
+    // alert("true");
+    $(".chef-message").text("Good afternoon");
+  }
+
+  if (parseInt(now) >= 18 || parseInt(now) === 0) {
+    $(".chef-message").text("Good evening");
+  }
 });
 
 //Initializing variables
