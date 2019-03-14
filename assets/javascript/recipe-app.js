@@ -241,3 +241,4 @@ $("#submit-btn").on("click", function(event) {
 });
 
 var recipeContainer = $("#recipe-container");
+
