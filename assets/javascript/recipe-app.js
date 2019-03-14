@@ -22,6 +22,29 @@ $(document).ready(function() {
     recentSearch.push(newSearch);
     localStorage.setItem("searches", JSON.stringify(recentSearch));
   });
+
+  for (var i = 0; i < recentSearch.length; i++){
+    var newLineDiv = $("<div>");
+    var newButton = $("<button>");
+    var newText1 = $("<p>");
+    var newText2 = $("<p>");
+    var newText3 = $("<p>");
+
+    newText1.append(recentSearch[i].ing1);
+    newText2.append(recentSearch[i].ing2);
+    newText3.append(recentSearch[i].ing3);
+
+    newLineDiv.append(newText1)
+              .append(newText2)
+              .append(newText3)
+              .addClass("pt-2 recents-div");
+
+    newButton.addClass("btn btn-primary recents-button");
+    newButton.append(newLineDiv);
+
+    $("#recent-searches-box").append(newButton);
+
+  }
 });
 
 //Initializing variables
