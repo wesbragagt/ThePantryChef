@@ -15,8 +15,12 @@ $.ajax({
     temperature = Math.floor(temperature);
     console.log(temperature);
 
+    var weatherType = response.weather[0].main;
+    console.log(weatherType);
 
+    var weatherMessage = "It's currently " + temperature + "&#8457;" + " outside. Weather conditions: " + weatherType;
     
+    $(".weather-message").text(weatherMessage);
 })
 
 
