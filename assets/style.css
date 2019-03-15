@@ -92,11 +92,14 @@ body {
 }
 
 .recents-div {
-  justify-content: right;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   width: 100%;
+}
+
+.recent-searches-header {
+  text-align: center;
 }
 
 .recipe-thumbnail {
