@@ -116,18 +116,9 @@ a:hover {
   color: #e78000;
 }
 
-#char-box #chef {
-  /* border: solid 1px #30aac0; */
-  /* border: solid 1px #30aac0; */
-  position: absolute;
-  left: 17rem;
-  top: 4rem;
-  z-index: 1;
-}
-
 /* utility classes */
 .custom-margin-top {
-  margin-top: 6em !important;
+  margin-top: 2em !important;
 }
 
 .custom-text-green {
@@ -136,15 +127,6 @@ a:hover {
 
 .custom-text-orange {
   color: #e78000;
-}
-
-/* logo up top */
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 91.5% !important;
-  z-index: 1030;
 }
 
 /* loading icon */
@@ -163,21 +145,20 @@ a:hover {
 
 /* phone screens media query */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-  .fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 65.5% !important;
-    z-index: 1030;
+  #top-logo {
+    display: none;
   }
+}
 
-  #char-box #chef {
-    /* border: solid 1px #30aac0; */
-    /* border: solid 1px #30aac0; */
-    position: absolute;
-    left: -4rem;
-    top: 4rem;
-    z-index: 1;
+/* LARGE screens */
+@media only screen and (min-device-width: 1281px) and (max-device-width: 1920px) {
+  #logo-holder {
+    background-image: url("../assets/images/Pantry-chef-hero1920x300.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 300px;
   }
 }
 
