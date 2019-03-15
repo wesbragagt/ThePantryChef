@@ -21,26 +21,27 @@
   </head>
   <body class="w3-animate-opacity">
       <!-- logo nav make it clickable -->
-    <a href="#top"><img class="responsive-img fixed-top" src="assets/images/favicon.ico/favicon-96x96.png" alt=""></a>
+    <a href="#top"><img id="top-logo" class="responsive-img fixed-top ml-auto" src="assets/images/favicon.ico/pantry-chef-noname96x96.png" alt=""></a>
 
     <div class="container-fluid" id="contentWrapper">
       <div class="row">
       <div class="jumbotron-fluid custom-bg mb-4" id="logo-holder">
         <div class="container d-flex flex-column align-items-center custom-margin-top">
             
-            <h1 class="display-4 text-dark montez-font">Pantry Chef</h1>
-            <p class="lead  text-dark chef-message">Placeholder until Moment or other time data is implemented</p>
-            <p class="lead text-dark weather-message"></p>
+            <div class="d-flex flex-column align-items-center message">
+                <h1 class="display-4 text-dark montez-font">Pantry Chef</h1>
+                <p class="lead  text-dark chef-message"></p>
+                <p class="lead text-dark weather-message"></p>
+                <p class="lead text-dark"> Tell me what ingredients you want to use <br> and I will give you a list of yummy possibilities</p>
+            </div>
+            
           </div>
           
       </div>
       </div>
       <div class="row justify-content-center">
           
-          <!-- Mascot Character -->
-            <div id="char-box" class=" d-inline-block">
-                    <img id="chef" class="responsive-img" src="assets/images/pantrychef-character.png" alt="chef-char">
-            </div>
+          
 
         <div class="col-12">
           <form class="d-flex flex-column justify-content-center">
