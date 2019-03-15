@@ -23,27 +23,22 @@ $(document).ready(function() {
     localStorage.setItem("searches", JSON.stringify(recentSearch));
   });
 
-  for (var i = 0; i < recentSearch.length; i++){
-    var newLineDiv = $("<div>");
-    var newButton = $("<button>");
-    var newText1 = $("<p>");
-    var newText2 = $("<p>");
-    var newText3 = $("<p>");
+  // TIME DISPLAY change paragraph with friendly good morning, good afternoon and good evening.
 
-    newText1.append(recentSearch[i].ing1);
-    newText2.append(recentSearch[i].ing2);
-    newText3.append(recentSearch[i].ing3);
+  var now = moment().format("HH:mm");
+  console.log(now);
 
-    newLineDiv.append(newText1)
-              .append(newText2)
-              .append(newText3)
-              .addClass("pt-2 recents-div");
+  if (parseInt(now) < 12 && parseInt(now) > 5) {
+    $(".chef-message").text("Good morning");
+  }
 
-    newButton.addClass("btn btn-primary recents-button");
-    newButton.append(newLineDiv);
+  if (parseInt(now) >= 12 && parseInt(now) < 18) {
+    // alert("true");
+    $(".chef-message").text("Good afternoon");
+  }
 
-    $("#recent-searches-box").append(newButton);
-
+  if (parseInt(now) >= 18 || parseInt(now) === 0) {
+    $(".chef-message").text("Good evening");
   }
 });
 
@@ -88,27 +83,34 @@ $("#submit-btn").on("click", function(event) {
     searchString = $("#ingredient-input-1")
       .val()
       .trim();
-  } else
-  {validEntries = false;
-  console.log("Entry 1 invalid.");
-  $("#input-error-box").append("<p>Ingredient 1 invalid. Letters and spaces only please!</p>");}
+  } else {
+    validEntries = false;
+    console.log("Entry 1 invalid.");
+    $("#input-error-box").append(
+      "<p>Ingredient 1 invalid. Letters and spaces only please!</p>"
+    );
+  }
 
   if (regExNotLetters.test($("#ingredient-input-2").val()) == false) {
     if (
       $("#ingredient-input-2")
         .val()
         .trim() != ""
-    ) { if ($("#ingredient-input-2"))
-      searchString +=
-        ", " +
-        $("#ingredient-input-2")
-          .val()
-          .trim();
+    ) {
+      if ($("#ingredient-input-2"))
+        searchString +=
+          ", " +
+          $("#ingredient-input-2")
+            .val()
+            .trim();
     }
-  } else
-  {validEntries = false;
-  console.log("Entry 2 invalid.");
-  $("#input-error-box").append("<p>Ingredient 2 invalid. Letters and spaces only please!</p>");}
+  } else {
+    validEntries = false;
+    console.log("Entry 2 invalid.");
+    $("#input-error-box").append(
+      "<p>Ingredient 2 invalid. Letters and spaces only please!</p>"
+    );
+  }
 
   if (regExNotLetters.test($("#ingredient-input-3").val()) == false) {
     if (
@@ -122,13 +124,16 @@ $("#submit-btn").on("click", function(event) {
           .val()
           .trim();
     }
-  } else
-  {validEntries = false;
-  console.log("Entry 3 invalid.");
-  $("#input-error-box").append("<p>Ingredient 3 invalid. Letters and spaces only please!</p>");}
+  } else {
+    validEntries = false;
+    console.log("Entry 3 invalid.");
+    $("#input-error-box").append(
+      "<p>Ingredient 3 invalid. Letters and spaces only please!</p>"
+    );
+  }
 
   if (validEntries) {
-      queryURL =
+    queryURL =
       baseURL + "app_id=" + appId + "&app_key=" + apiKey + "&q=" + searchString;
 
     $.ajax({
@@ -159,9 +164,15 @@ $("#submit-btn").on("click", function(event) {
 
         var nameLine = "<p>Recipe: " + recipeObject[i].recipe.label + "</p>";
         var lineBreak = "<br>";
-        var servingsLine = "<p>Serves: " + recipeObject[i].recipe.yield + "</p>";
+        var servingsLine =
+          "<p>Serves: " + recipeObject[i].recipe.yield + "</p>";
         var caloriesLine =
-          "<p>Calories: " + Math.floor(recipeObject[i].recipe.calories) + "</p>";
+          "<p>Calories: " +
+          Math.floor(
+            recipeObject[i].recipe.calories / recipeObject[i].recipe.yield
+          ) +
+          "</p>";
+
         var recipeLinkLine =
           "<a href='" +
           recipeObject[i].recipe.shareAs +
@@ -210,7 +221,11 @@ $("#submit-btn").on("click", function(event) {
         var column3 = $("<div>");
         column3.addClass("col-4 recipe-bottom-right");
         column3.html(
-          "<p>Cal.: " + Math.floor(recipeObject[i].recipe.calories) + "</p>"
+          "<p>Cal.: " +
+            Math.floor(
+              recipeObject[i].recipe.calories / recipeObject[i].recipe.yield
+            ) +
+            "</p>"
         );
 
         var newThumb = $("<img>");
@@ -245,8 +260,9 @@ $("#submit-btn").on("click", function(event) {
         }, 100);
       }
     });
-  } else
-  {console.log("Invalid entry detected. Check the input boxes.");};
+  } else {
+    console.log("Invalid entry detected. Check the input boxes.");
+  }
 });
 
 var recipeContainer = $("#recipe-container");

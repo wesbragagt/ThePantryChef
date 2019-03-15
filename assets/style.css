@@ -27,7 +27,7 @@ body {
 }
 
 .montez-font {
-  font-family: 'Montez', cursive;
+  font-family: "Montez", cursive;
   font-size: 5em;
 }
 
@@ -54,13 +54,13 @@ body {
 
 #submit-btn {
   background-color: #30aac0;
-} 
+}
 
-
-.grow { 
-  transition: all .2s ease-in-out; 
-} .grow:hover { 
-  transform: scale(1.1); 
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
   -moz-box-shadow: 0 0 20px #444;
   -webkit-box-shadow: 0 0 20px #444;
   box-shadow: 0 0 20px #444;
@@ -137,6 +137,15 @@ a:hover {
   color: #e78000;
 }
 
+#char-box #chef {
+  /* border: solid 1px #30aac0; */
+  /* border: solid 1px #30aac0; */
+  position: absolute;
+  left: 17rem;
+  top: 4rem;
+  z-index: 1;
+}
+
 /* utility classes */
 .custom-margin-top {
   margin-top: 6em !important;
@@ -181,6 +190,15 @@ a:hover {
     right: 0;
     left: 65.5% !important;
     z-index: 1030;
+  }
+
+  #char-box #chef {
+    /* border: solid 1px #30aac0; */
+    /* border: solid 1px #30aac0; */
+    position: absolute;
+    left: -4rem;
+    top: 4rem;
+    z-index: 1;
   }
 }
 
