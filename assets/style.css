@@ -37,9 +37,8 @@ body {
 
 #logo-holder {
   background-image: url("../assets/images/pantry-hero-img-1280x300.jpeg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
   width: 100%;
   min-height: 300px;
 }
@@ -95,7 +94,8 @@ body {
   margin: 6px 0;
   background-color: #30aac0;
   border: 1px solid #30aac0;
-} .recents-button:hover {
+}
+.recents-button:hover {
   background-color: #fff;
   color: #30aac0;
 }
@@ -105,7 +105,6 @@ body {
   flex-flow: row;
   justify-content: space-around;
   width: 100%;
-  
 }
 
 .recent-searches-header {
@@ -199,7 +198,7 @@ a:hover {
 /* LARGE screens */
 @media only screen and (min-device-width: 1281px) and (max-device-width: 1920px) {
   #logo-holder {
-    background-image: url("../assets/images/Pantry-chef-hero1920x300.jpg");
+    background-image: url("../assets/images/Hero-img-1920x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
