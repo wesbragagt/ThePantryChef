@@ -1,14 +1,14 @@
 var recentSearch = JSON.parse(localStorage.getItem("searches"));
 
-
 var regExNotLetters = /[^a-z\s]/i;
-
 
 //Prints the recent searches in its spot whenever this is called
 function printFavorites() {
   $("#recent-searches-box").html("");
   if (recentSearch.length > 0) {
-    $("#recent-searches-box").html("<button type='submit' class='btn recent-searches-header mt-2'>Recent Searches</button>");
+    $("#recent-searches-box").html(
+      "<button type='submit' class='btn recent-searches-header mt-2'>Recent Searches</button>"
+    );
     for (var i = 0; i < recentSearch.length; i++) {
       var ingred1 = recentSearch[i].ing1;
       var ingred2 = recentSearch[i].ing2;
@@ -21,16 +21,17 @@ function printFavorites() {
       var newDiv2 = $("<div>");
 
       newBtn.addClass("btn btn-primary recents-button collapse multi-collapse");
-      newBtn.attr("data-value", ingred1 + "," + ingred2 + "," + ingred3 );
+      newBtn.attr("data-value", ingred1 + "," + ingred2 + "," + ingred3);
       newBigDiv.addClass("recents-div");
 
       newDiv0.text(ingred1);
       newDiv1.text(ingred2);
       newDiv2.text(ingred3);
 
-      newBigDiv.append(newDiv0)
-              .append(newDiv1)
-              .append(newDiv2);
+      newBigDiv
+        .append(newDiv0)
+        .append(newDiv1)
+        .append(newDiv2);
 
       newBtn.append(newBigDiv);
 
@@ -49,9 +50,35 @@ $(document).ready(function() {
   // submit button storage
   $("#submit-btn").on("click", function() {
     //Makes sure search terms are valid
-    if (regExNotLetters.test($("#ingredient-input-1").val().trim()) == false && regExNotLetters.test($("#ingredient-input-2").val().trim()) == false && regExNotLetters.test($("#ingredient-input-3").val().trim()) == false) {
+    if (
+      regExNotLetters.test(
+        $("#ingredient-input-1")
+          .val()
+          .trim()
+      ) == false &&
+      regExNotLetters.test(
+        $("#ingredient-input-2")
+          .val()
+          .trim()
+      ) == false &&
+      regExNotLetters.test(
+        $("#ingredient-input-3")
+          .val()
+          .trim()
+      ) == false
+    ) {
       //Makes sure search boxes arent empty
-      if ($("#ingredient-input-1").val().trim() != "" || $("#ingredient-input-2").val().trim() != "" || $("#ingredient-input-3").val().trim() != "") {
+      if (
+        $("#ingredient-input-1")
+          .val()
+          .trim() != "" ||
+        $("#ingredient-input-2")
+          .val()
+          .trim() != "" ||
+        $("#ingredient-input-3")
+          .val()
+          .trim() != ""
+      ) {
         var newSearch = {
           ing1: $("#ingredient-input-1")
             .val()
@@ -66,7 +93,7 @@ $(document).ready(function() {
 
         //Limits recent searches to 3
         if (recentSearch.length >= 3) {
-          for (var i = 3; recentSearch.length >= i;) {
+          for (var i = 3; recentSearch.length >= i; ) {
             recentSearch.shift();
           }
         }
@@ -100,12 +127,14 @@ $(document).ready(function() {
 
   //Handler for clicking recent searches buttons
   $("body").on("click", ".recents-button", function(event) {
-    var ingredientsArray = $(this).attr("data-value").split(",");
+    var ingredientsArray = $(this)
+      .attr("data-value")
+      .split(",");
     for (var i = 0; i < ingredientsArray.length; i++) {
-      var inputId = i+1;
+      var inputId = i + 1;
       $("#ingredient-input-" + inputId).val(ingredientsArray[i]);
-    };
-  })
+    }
+  });
 });
 
 //Initializing variables
@@ -239,7 +268,7 @@ $("#submit-btn").on("click", function(event) {
 
         var recipeLinkLine =
           "<a href='" +
-          recipeObject[i].recipe.shareAs +
+          recipeObject[i].recipe.url +
           "' target='_blank'>Click Here for Full Recipe</a>";
         var sourceLine = "<p>Source: " + recipeObject[i].recipe.source + "</p>";
 

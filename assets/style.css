@@ -26,6 +26,13 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+h1 {
+  color: #ffffff;
+  -webkit-text-fill-color: #343a40;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #343a40;
+}
+
 .montez-font {
   font-family: "Montez", cursive;
   font-size: 5em;
