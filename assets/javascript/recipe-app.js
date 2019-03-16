@@ -8,7 +8,7 @@ var regExNotLetters = /[^a-z\s]/i;
 function printFavorites() {
   $("#recent-searches-box").html("");
   if (recentSearch.length > 0) {
-    $("#recent-searches-box").html("<p class='recent-searches-header mt-2'>Recent Searches:</p>");
+    $("#recent-searches-box").html("<button type='submit' class='btn recent-searches-header mt-2'>Recent Searches</button>");
     for (var i = 0; i < recentSearch.length; i++) {
       var ingred1 = recentSearch[i].ing1;
       var ingred2 = recentSearch[i].ing2;
@@ -20,7 +20,7 @@ function printFavorites() {
       var newDiv1 = $("<div>");
       var newDiv2 = $("<div>");
 
-      newBtn.addClass("btn btn-primary recents-button");
+      newBtn.addClass("btn btn-primary recents-button collapse multi-collapse");
       newBtn.attr("data-value", ingred1 + "," + ingred2 + "," + ingred3 );
       newBigDiv.addClass("recents-div");
 
