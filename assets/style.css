@@ -31,6 +31,10 @@ body {
   font-size: 5em;
 }
 
+.respond-text {
+  font-size: 1em;
+}
+
 #logo-holder {
   background-image: url("../assets/images/pantry-hero-img-1280x300.jpeg");
   background-size: cover;
@@ -144,9 +148,17 @@ a:hover {
 }
 
 /* phone screens media query */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media screen and (max-width: 667px) {
   #top-logo {
     display: none;
+  }
+
+  .montez-font {
+    font-size: 4.5em;
+  }
+
+  .respond-text {
+    font-size: 0.9em;
   }
 }
 
