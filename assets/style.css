@@ -93,6 +93,11 @@ body {
   display: flex;
   flex-flow: row;
   margin: 6px 0;
+  background-color: #30aac0;
+  border: 1px solid #30aac0;
+} .recents-button:hover {
+  background-color: #fff;
+  color: #30aac0;
 }
 
 .recents-div {
@@ -100,10 +105,15 @@ body {
   flex-flow: row;
   justify-content: space-around;
   width: 100%;
+  
 }
 
 .recent-searches-header {
   text-align: center;
+  background-color: #30aac0;
+  color: #fff;
+  border: 1px solid #30aac0;
+  margin: auto;
 }
 
 .recipe-thumbnail {
