@@ -82,6 +82,30 @@ body {
   border-radius: 10px;
 }
 
+#recent-searches-box {
+  display: flex;
+  flex-flow: column;
+}
+
+.recents-button {
+  min-width: fit-content;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  margin: 6px 0;
+}
+
+.recents-div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.recent-searches-header {
+  text-align: center;
+}
+
 .recipe-thumbnail {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
