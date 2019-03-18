@@ -32,5 +32,5 @@
 - LinkedIn: https://www.linkedin.com/in/weslley-braga-07695316a/
 
 @JEverettCreative
-- e-mail: 
-- LinkedIn:
+- e-mail: jonathan@jonathaneverettcreative.com
+- LinkedIn: https://www.linkedin.com/in/jonathan-everett-64725435/
