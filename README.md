@@ -28,9 +28,9 @@
 - LinkedIn: https://www.linkedin.com/in/jed-kendall/
 
 @wesbragagt
-- e-mail:
-- LinkedIn:
+- e-mail:wesbragagt@gmail.com
+- LinkedIn: https://www.linkedin.com/in/weslley-braga-07695316a/
 
 @JEverettCreative
-- e-mail:
+- e-mail: 
 - LinkedIn:
