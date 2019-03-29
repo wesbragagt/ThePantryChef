@@ -1,143 +1,150 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    /* This is a cool linear gradient http://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
+    background: #ffc578; /* Old browsers */
+    background: -moz-radial-gradient(
+        center,
+        ellipse cover,
+        #ffc578 0%,
+        #fb9d23 100%
+    ); /* FF3.6-15 */
+    background: -webkit-radial-gradient(
+        center,
+        ellipse cover,
+        #ffc578 0%,
+        #fb9d23 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(
+        ellipse at center,
+        #ffc578 0%,
+        #fb9d23 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
-  /* This is a cool linear gradient http://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
-  background: #ffc578; /* Old browsers */
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #ffc578 0%,
-    #fb9d23 100%
-  ); /* FF3.6-15 */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #ffc578 0%,
-    #fb9d23 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(
-    ellipse at center,
-    #ffc578 0%,
-    #fb9d23 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+h1 {
+    color: #ffffff;
+    -webkit-text-fill-color: #343a40;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #343a40;
 }
 
 .montez-font {
-  font-family: "Montez", cursive;
-  font-size: 5em;
+    font-family: "Montez", cursive;
+    font-size: 5em;
 }
 
 .respond-text {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 #logo-holder {
-  background-image: url("../assets/images/pantry-hero-img-1280x300.jpeg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 300px;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 300px;
 }
 
 .recipe-holder {
-  max-width: 300px;
+    max-width: 300px;
 }
 
 .recipe-thumbnail {
-  max-width: 300px;
+    max-width: 300px;
 }
 
 .btn-centering {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 #submit-btn {
-  background-color: #30aac0;
+    background-color: #30aac0;
 }
 
 .grow {
-  transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .grow:hover {
-  transform: scale(1.1);
-  -moz-box-shadow: 0 0 20px #444;
-  -webkit-box-shadow: 0 0 20px #444;
-  box-shadow: 0 0 20px #444;
+    transform: scale(1.1);
+    -moz-box-shadow: 0 0 20px #444;
+    -webkit-box-shadow: 0 0 20px #444;
+    box-shadow: 0 0 20px #444;
 }
 
 /* Classes for image aesthetics */
 
 .recipe-holder {
-  background: #ffffff;
-  -moz-box-shadow: 0 0 20px #444;
-  -webkit-box-shadow: 0 0 20px #444;
-  box-shadow: 0 0 20px #444;
-  padding: 0;
-  margin-bottom: 10px;
-  border-radius: 10px;
+    background: #2da7bc;
+    -moz-box-shadow: 0 0 10px #444;
+    -webkit-box-shadow: 0 0 10px #444;
+    box-shadow: 0 0 10px #fff;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 #recent-searches-box {
-  display: flex;
-  flex-flow: column;
+    display: flex;
+    flex-flow: column;
 }
 
 .recents-button {
-  min-width: fit-content;
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-  margin: 6px 0;
-  background-color: #30aac0;
-  border: 1px solid #30aac0;
+    min-width: fit-content;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    margin: 6px 0;
+    background-color: #30aac0;
+    border: 1px solid #30aac0;
 }
 .recents-button:hover {
-  background-color: #fff;
-  color: #30aac0;
+    background-color: #fff;
+    color: #30aac0;
 }
 
 .recents-div {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .recent-searches-header {
-  text-align: center;
-  background-color: #30aac0;
-  color: #fff;
-  border: 1px solid #30aac0;
-  margin: auto;
+    text-align: center;
+    background-color: #30aac0;
+    color: #fff;
+    border: 1px solid #30aac0;
+    margin: auto;
 }
 
 .recipe-thumbnail {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .recipe-bottom-row {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
 .recipe-popup {
-  position: relative;
-  background-color: #30aac0;
-  opacity: 0.75;
-  color: #fff;
-  display: flex;
-  flex-flow: row;
-  max-width: 960px;
-  margin: auto;
-  align-content: center;
+    position: relative;
+    background-color: #30aac0;
+    opacity: 0.75;
+    color: #fff;
+    display: flex;
+    flex-flow: row;
+    max-width: 960px;
+    margin: auto;
+    align-content: center;
 }
 
 .popup-image {
-  width: 300px;
+    width: 300px;
 }
 
 /* .recipe-bottom-right {
@@ -145,72 +152,76 @@ body {
 } */
 
 a {
-  text-decoration: none;
-  color: #30aac0;
+    text-decoration: none;
+    color: #30aac0;
 }
 a:hover {
-  text-decoration: none;
-  color: #e78000;
+    text-decoration: none;
+    color: #fcb75b;
 }
 
 /* utility classes */
 .custom-margin-top {
-  margin-top: 2em !important;
+    margin-top: 2em !important;
 }
 
 .custom-text-green {
-  color: #30aac0;
+    color: #30aac0;
 }
 
 .custom-text-orange {
-  color: #e78000;
+    color: #e78000;
 }
 
 /* loading icon */
 .loader {
-  animation: spin 1.3s linear infinite;
+    animation: spin 1.3s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* phone screens media query */
 @media screen and (max-width: 667px) {
-  #top-logo {
-    display: none;
-  }
+    #top-logo {
+        display: none;
+    }
 
-  .montez-font {
-    font-size: 4.5em;
-  }
+    .montez-font {
+        font-size: 4.5em;
+    }
 
-  .respond-text {
-    font-size: 0.9em;
-  }
+    .respond-text {
+        font-size: 0.9em;
+    }
 }
 
 /* LARGE screens */
 @media only screen and (min-device-width: 1281px) and (max-device-width: 1920px) {
-  #logo-holder {
-    background-image: url("../assets/images/Hero-img-1920x.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    min-height: 300px;
-  }
+    #logo-holder {
+        background-image: url("../assets/images/Hero-img-1920x.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        min-height: 300px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-  .recipe-popup {
-    display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
-  }
+    .recipe-popup {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+    }
+
+    #logo-holder {
+        background-image: none;
+    }
 }
