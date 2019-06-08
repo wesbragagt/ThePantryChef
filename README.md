@@ -1,5 +1,5 @@
 # ThePantryChef
-##Project 1
+![The PantryChef Demo](pantrychef.gif)
 
 ## Contributors
 @wesbragagt
@@ -16,10 +16,10 @@
 - First project for the Vanderbilt Coding Bootcamp, due March 18th 2019. This app takes user input of up to 3 ingredients and retrives up to 10 recipes involving those ingredients and prints them to the page. Dynamically updates and saves recent 3 searches. Also provides local weather info to help personalize the experience.
 
 ## License
-- None
+- MIT
 
 ## How to use this code
-- Open the app in the git environment and input 1 to 3 ingredients.
+- Open the app in the browser of choice and add 1 to 3 ingredients you would like to find recipes related to, for example, cheese, chicken and rice.
   
 ## Contact
 
@@ -29,7 +29,7 @@
 
 @wesbragagt
 - e-mail:wesbragagt@gmail.com
-- LinkedIn: https://www.linkedin.com/in/weslley-braga-07695316a/
+- LinkedIn: https://www.linkedin.com/in/wesbragagt
 
 @JEverettCreative
 - e-mail: jonathan@jonathaneverettcreative.com
