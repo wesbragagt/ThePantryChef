@@ -71,9 +71,37 @@ h1 {
 }
 .grow:hover {
     transform: scale(1.1);
-    -moz-box-shadow: 0 0 20px #444;
-    -webkit-box-shadow: 0 0 20px #444;
-    box-shadow: 0 0 20px #444;
+    -moz-box-shadow: 0 0 20px white;
+    -webkit-box-shadow: 0 0 20px white;
+    box-shadow: 0 0 20px white;
+}
+
+#top-logo {
+    animation: slideLeft 2s ease-out;
+}
+
+#character {
+    position: absolute;
+    top: 77px;
+    left: 263px;
+    height: 187px;
+    width: 155px;
+    background-image: url("../assets/images/pantrychef-character.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slideLeft 2s;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 /* Classes for image aesthetics */
@@ -189,6 +217,18 @@ a:hover {
 
 /* phone screens media query */
 @media screen and (max-width: 667px) {
+    #character {
+        display: none;
+        position: absolute;
+        top: 77px;
+        left: 263px;
+        height: 187px;
+        width: 155px;
+        background-image: url("../assets/images/pantrychef-character.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: slideLeft 2s;
+    }
     #top-logo {
         display: none;
     }
@@ -205,7 +245,6 @@ a:hover {
 /* LARGE screens */
 @media only screen and (min-device-width: 1281px) and (max-device-width: 1920px) {
     #logo-holder {
-        background-image: url("../assets/images/Hero-img-1920x.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
