@@ -6,7 +6,7 @@
 @JEverettCreative
 @jryankendall
 
-## Technology
+## Technologies
 - HTML5, CSS, Bootstrap
 - Javascript, jQuery, Ajax, moment.js, magnific-popup.js
 - Local storage
